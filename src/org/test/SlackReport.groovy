@@ -1,11 +1,15 @@
+package org.test
+
 class SlackReport implements Report {
 
     private String token
     private String slackChannel
+    private String domain
 
     SlackReport(String token, String slackDomain, String slackChannel) {
         this.token = token
         this.slackChannel = slackChannel
+        this.domain = slackDomain
     }
 
     def getUserByEmail(String email) {
@@ -20,7 +24,7 @@ class SlackReport implements Report {
 
     def sendMessage(String title, String message, String color) {
         response = slackSend(channel: "${slackChannel}",
-                teamDomain: "${slackDomain}",
+                teamDomain: "${domain}",
                 token: "${token}",
                 botUser: true,
                 message: "${title}",

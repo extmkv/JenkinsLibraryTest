@@ -1,3 +1,5 @@
+package org.test
+
 interface Report {
 
     def getUserByEmail(String email)

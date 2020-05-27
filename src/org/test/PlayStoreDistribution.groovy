@@ -1,3 +1,5 @@
+package org.test
+
 class PlayStoreDistribution implements Distribution {
 
     def upload(String aabPath) {
