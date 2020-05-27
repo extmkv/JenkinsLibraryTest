@@ -27,7 +27,7 @@ class SlackReport implements Report {
     }
 
     def sendMessage(String title, String message, String color) {
-        response = pipeline.slackSend(channel: "${slackChannel}",
+        def response = pipeline.slackSend(channel: "${slackChannel}",
                 teamDomain: "${domain}",
                 token: "${token}",
                 botUser: true,
