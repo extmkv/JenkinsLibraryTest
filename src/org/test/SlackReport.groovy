@@ -38,7 +38,7 @@ class SlackReport implements Report {
                                 text : "${message}"
                         ]
                 ])
-        println "Response: ${response}"
+        pipeline.println "Response: ${response}"
     }
 }
 
