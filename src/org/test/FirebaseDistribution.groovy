@@ -17,6 +17,6 @@ public class FirebaseDistribution implements Distribution {
     }
 
     def upload(String aabPath) {
-        pipeline.sh "firebase appdistribution:distribute $aabPath --app $appId --token $token --release-notes \"$releaseNotes\" --groups \"$groups\")"
+        pipeline.sh "firebase appdistribution:distribute $aabPath --app $appId --token $token --release-notes \"$releaseNotes\" --groups \"$groups\""
     }
 }
